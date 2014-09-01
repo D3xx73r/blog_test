@@ -1,0 +1,7 @@
+<% @users.each do |user| %>
+  <ul>
+    <li><%= user.email %></li>
+    <li><%= link_to "Editar User", edit_admins_user_path(user) %></li>
+    <li><%= link_to "Borrar User", admins_user(user), method: "delete", confirm: "esta seguro?" %></li>
+  </ul>
+<% end %>
